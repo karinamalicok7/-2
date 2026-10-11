@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg"><meta name="theme-color" content="#0b3cff"><meta name="apple-mobile-web-app-capable" content="yes"><title>Биотехнология 26.4</title>
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg"><meta name="theme-color" content="#0b3cff"><meta name="apple-mobile-web-app-capable" content="yes"><title>Цифровий Дизайн 117</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700;1,900&family=Russo+One&family=Rubik:ital,wght@0,900&family=Oswald:wght@700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
 <style>
 :root{--bg1:#0a12b0;--bg2:#0b3cff;--bg3:#18c4ff;--acc:#22d3ff;--hi:#e8141c;--ink:#fff}
@@ -266,7 +266,7 @@ body.ios .ghost{animation:none}
 <div class="ghost" id="ghost">Меню</div>
 
 <header class="bar">
-  <div class="plate"><span>Биотехнология 26.4</span></div>
+  <div class="plate"><span>Цифровий Дизайн 117</span></div>
   <div class="ic"><button id="thm" aria-label="Тема (T)">◐</button><button id="ins" style="display:none" aria-label="Установить">⤓</button><button id="sfb" class="off" aria-label="Звуки интерфейса">♬</button><button id="fxb" aria-label="Анимации вкл/выкл (A)">✦</button><button id="snd" aria-label="Lofi (J)">♪</button></div>
 </header>
 
@@ -600,7 +600,7 @@ $("#ndl").onclick=function(){delete NOTES[nk];nsave();nclose();nrefresh()};$("#n
 document.addEventListener("click",function(e){var l=e.target.closest&&e.target.closest("#ls .les,#td .les,#tm .les");if(!l||!l.dataset.k)return;if(Math.abs(e.clientX-sx)>10||Math.abs(e.clientY-sy)>10)return;nopen(l.dataset.k)});
 /* поделиться */
 function toast(m){var e=$("#toast");e.textContent=m;e.classList.add("on");clearTimeout(e._t);e._t=setTimeout(function(){e.classList.remove("on")},1800)}
-function shareDay(i,f){var L=S[i][1].filter(function(l){return f=="all"||l[4]=="a"||l[4]==f}),t=S[i][0]+(f!="all"?" ("+PL[f]+")":"")+"\n"+L.map(function(l){var n=NOTES[i+"|"+l[0]+"|"+l[2]];return l[0]+"–"+l[1]+" "+l[2]+(l[3]?" ["+l[3]+"]":"")+(n?" 📝 "+n:"")}).join("\n")+"\n— Биотехнология 26.4";
+function shareDay(i,f){var L=S[i][1].filter(function(l){return f=="all"||l[4]=="a"||l[4]==f}),t=S[i][0]+(f!="all"?" ("+PL[f]+")":"")+"\n"+L.map(function(l){var n=NOTES[i+"|"+l[0]+"|"+l[2]];return l[0]+"–"+l[1]+" "+l[2]+(l[3]?" ["+l[3]+"]":"")+(n?" 📝 "+n:"")}).join("\n")+"\n— Цифровий Дизайн 117";
  if(navigator.share)navigator.share({text:t}).catch(function(){});else if(navigator.clipboard)navigator.clipboard.writeText(t).then(function(){toast("Скопировано ✓")},function(){toast("Не удалось скопировать")});else toast("Не удалось скопировать")}
 $("#shS").onclick=function(){shareDay(di,wk)};
 $("#shT").onclick=function(){var n=new Date(),i=tIdx(n);if(i<0){toast("Сегодня выходной");return}shareDay(i,par(n))};
